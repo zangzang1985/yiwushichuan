@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 52% 95%;
+    --foreground: 210 40% 30%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 30%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 30%;
+
+    --primary: 195 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 350 100% 86%;
+    --secondary-foreground: 210 40% 30%;
+
+    --muted: 160 40% 95%;
+    --muted-foreground: 210 40% 40%;
+
+    --accent: 60 100% 90%;
+    --accent-foreground: 210 40% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 195 30% 88%;
+    --input: 195 30% 88%;
+    --ring: 195 80% 55%;
+
+    --radius: 1.5rem;
+  }
+
+  .dark {
+    --background: 220 20% 20%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 25%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 25%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 195 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 350 100% 75%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 30% 30%;
+    --muted-foreground: 210 40% 70%;
+
+    --accent: 60 80% 80%;
+    --accent-foreground: 210 40% 20%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 30% 35%;
+    --input: 217 30% 35%;
+    --ring: 195 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-rounded;
+    font-family: 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn-macaron-primary {
+    @apply bg-gradient-to-r from-macaron-pink to-macaron-blue text-white font-bold py-3 px-8 rounded-full shadow-soft-pink hover:shadow-lg hover:scale-105 transition-all duration-300;
+  }
+  .btn-macaron-secondary {
+    @apply bg-white border-2 border-macaron-blue text-macaron-blue font-bold py-3 px-8 rounded-full shadow-soft hover:shadow-lg hover:scale-105 transition-all duration-300;
+  }
+  .card-macaron {
+    @apply bg-white/90 backdrop-blur-sm rounded-3xl shadow-soft border border-macaron-blue/20;
+  }
+  .gradient-bg {
+    background: linear-gradient(135deg, #A8D8EA 0%, #FFB6C1 50%, #FFFACD 100%);
+  }
+  .gradient-bg-soft {
+    background: linear-gradient(135deg, #E6E6FA 0%, #A8D8EA 50%, #98D8C8 100%);
+  }
+}
+
+@layer utilities {
+  .text-gradient-macaron {
+    background: linear-gradient(135deg, #FFB6C1 0%, #A8D8EA 50%, #98D8C8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
